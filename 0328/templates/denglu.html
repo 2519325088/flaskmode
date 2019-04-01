@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        .top{
+	            margin:0 auto;
+	            height:50px;
+	            width:980px;
+	            border-radius:6px;
+	        }
+	        .zhuce{
+	        	margin:0 auto;
+	        	width:980px;
+	        	height:30px;
+	        }
+	    </style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			{%for i in bucun%}
+				alert('账户或密码错误')
+			{%endfor%}
+		</script>
+		
+	    <div class="top">
+	        <h1>欢迎你来到枫火科技网络平台</h1>
+	    </div>
+		<div class="zhuce">
+			<form action="" method="post">
+				账号：<input type="text" name="username"/>
+				密码：<input type="password" name="password"/>
+				<input type="submit" value="登录"/>
+				
+			</form>
+			<button><a href="/">返回首页</a></button>
+		</div>
+	</body>
+</html>

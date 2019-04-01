@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .top{
+            margin:0 auto;
+            height:50px;
+            width:980px;
+            border-radius:6px;
+        }
+        .zhuce{
+        	margin:0 auto;
+        	width:980px;
+        }
+        
+        .hang{
+        	margin:5px 0;
+        	height:50px;
+        	width:980px;
+        	line-height:50px;
+        	background-color: red;
+        }
+        .hang button{
+        	border-radius:5px;
+        	background-color:turquoise;
+        }
+        /*.hang>.tu{
+        	margin-left:50px;
+        	width:50px;
+        	height:50px;
+        	float:left;
+        	font-size:20px;
+        	font-weight:700;
+        }*/
+        .left{
+        	
+        	width:500px;
+        	height:50px;
+        	float:left;
+        	background-color:blue;
+        	margin-left:10px;
+        }
+        .zhong{
+        	width:50px;
+        	height:30px;
+        	float:left;
+        	margin-left:50px;
+        	border-radius:5px;
+        }
+        .right{
+        	width:50px;
+        	height:30px;
+        	float:left;
+        	margin-left:20px;
+        	border-radius:5px;
+        }
+        .left>.leftl{
+        	width:400px;
+        	text-align:center;
+        	height:50px;
+        	line-height:50px;
+        	float:left;
+        	text-overflow: ellipsis;
+        }
+        .left>.leftr{
+        	width:100px;
+        	text-align:center;
+        	height:50px;
+        	line-height:50px;
+        	float:left;
+        }
+        .hang>ol>li{
+        	
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>欢迎你来到枫火科技网络平台</h1>
+    </div>
+	<div class="zhuce">
+		<div class="zhuce">
+            <hi>欢迎你{{user}}</hi>
+            
+            <!--<ul>
+                {%for spl in spinfo%}
+                    <li>
+                        <span>{{spl.id}}</span>
+                        <span>{{spl.name}}</span>
+                        <span>{{spl.price}}</span>
+                    </li>
+                {%endfor%}
+            </ul>-->
+            <ol>
+	            {%for i in resul%}
+		            <form action="" method="post">
+			            <li>
+				            <div class="hang">	
+		            			<div class="left">
+				            		<div class="leftl">
+				            			<a href="/chakan/{{i.spname}}">{{i.spname}}</a>
+				            		</div>
+				            		<div class="leftr">{{user}}</div>
+				            	</div>
+				            	<div class="zhong"><button><a href="/xiugai/{{i.spname}}">修改</a></button></div>
+				            	<div class="right"><button><a href="/shanchu/{{i.spname}}">删除</a></button></div>
+				            </div>
+			            </li>
+		            </form>
+	            {%endfor%}
+            </ol>
+            <button><a href="/tianjia">添加</a></button>
+            <button><a href="/">返回首页</a></button>
+            <button><a href="/exita">退出</a></button>
+            
+		</div>
+	</div>
+</body>
+</html>
